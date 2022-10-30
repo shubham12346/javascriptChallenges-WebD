@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Modal component </title>
+    <style>
+        body{
+            background-color: lightgreen;
+        }
+        .hidden{
+            display: none;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+           
+            z-index: 2;
+
+        }
+        .modal{
+           
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+             background-color: aliceblue;
+             z-index: 10;
+             border-radius: 15px;
+             height: 300px;
+
+        }
+       
+    </style>
+</head>
+<body>
+
+     <button class="openModel " > first </button> 
+    <button  class="openModel "> Second  </button> 
+     <button class="openModel "> third </button>   
+  
+
+    <div  class="modal hidden">
+        <button class="closeModel" > close1 </button>
+        <div> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, minus repellat. Unde, iure! Dolorem, debitis quos! Suscipit reiciendis maiores porro voluptatum. Nemo dolorum consequatur quas illum blanditiis incidunt doloremque totam?</p></div>
+    </div>
+    <div class="overlay hidden"> </div>
+
+    <div class="modal hidden">
+        <button class="closeModel"> close 2</button>
+        <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita consequatur voluptatibus rerum possimus in fugit neque, hic voluptates magni, soluta aspernatur animi libero, nam harum incidunt iure ad qui sunt.</div>
+    </div>
+     <div class="modal hidden">
+         <button class="closeModel"> close 3</button>
+        <div> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quos minima nulla aliquid deleniti voluptatum corporis aliquam facilis accusantium animi aperiam dicta, saepe nostrum consequuntur molestias! Nulla dolorum commodi dolor?</div>
+    </div>
+
+
+    <script type="text/javascript">
+            const openModel = document.querySelectorAll('.openModel');
+            const overlay = document.querySelector('.overlay');
+            const closeModel = document.querySelector('.closeModel');
+            const modal = document.querySelectorAll('.modal')
+
+
+           
+
+            for(let i=0;i<openModel.length ;i++)
+            openModel[i].addEventListener('click' , ()=>{
+                modal[i].classList.remove('hidden');
+                overlay.classList.remove('hidden')
+            })
+
+          for(let i=0;i<openModel.length;i++)
+                {
+                      overlay.addEventListener('click',function (){
+                        overlay.classList.add('hidden')
+                        modal[i].classList.add('hidden');
+
+            })
+            
+            modal[i].children[0].addEventListener('click',function (){
+                        overlay.classList.add('hidden')
+                        modal[i].classList.add('hidden');
+
+            })
+
+                }
+          
+
+          
+           
+
+    </script>
+</body>
+</html>
