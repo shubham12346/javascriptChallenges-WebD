@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig game </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-red-900 ">
+    <div class="flex  justify-center mt-32 relative ">
+            <div class="left bg-green-400 p-20 space-y-28 flex flex-col items-center rounded-lg ">
+                <div class="px-4"> <h1 class="text-3xl mx-3 my-3" >Player 1</h1>
+                <div class="mx-12 my-6 text-3xl" id="player1"> 8 </div>
+                </div>
+            
+                <div class="px-8 py-4 flex flex-col items-center bg-green-600 shadow-2xl rounded-lg"> 
+                    <div> <p class="text-xl" >Current </p> </div>
+                    <div> <p class="text-xl" id="pc1"> 0 </p>  </div>
+                </div>
+            </div>
+
+
+            <div class="left bg-green-400 p-20 space-y-28 flex flex-col items-center border-l-2 rounded-lg">
+                <div class="px-4"> <h1 class="text-3xl mx-3 my-3">Player 2</h1>
+                <div class="mx-12 my-6 text-3xl" id="player2"> 8p
+
+                </div>
+                </div>
+            
+                <div class="px-8 py-4 flex flex-col items-center bg-green-600 shadow-2xl rounded-lg"> 
+                    <div> <p class="text-xl">Current </p> </div>
+                    <div> <p class="text-xl" id="pc2"> 0 </p>  </div>
+                </div>
+            </div>
+
+        <div class="absolute inset-0 left-[47%] top-3 bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[45%]"><button> New game</button></div>
+<!-- 
+        image diece -->
+           <div class="absolute inset-0 left-[47%] md:left-[45%] top-28 bg-white w-fit h-fit px-3 py-2 rounded-md"> <img src="/dice-1.png" class="w-16" alt="" srcset=""  id="diece"></div>
+
+            <!-- //roll diece  -->
+        <div class="absolute inset-0 left-[47%] md:left-[45%] top-[16rem] bg-white w-fit h-fit px-3 py-2 rounded-md   "><button id="rolldice"> Roll Dice </button></div>
+
+
+
+        <div class="absolute inset-0 left-[48%] top-[20rem]  bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[47%]"><button> Hold</button></div>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

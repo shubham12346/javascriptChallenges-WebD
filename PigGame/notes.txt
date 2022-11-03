@@ -1,0 +1,8 @@
+User rolls ->generate random dice roll -> display dice roll -> is it 1 ?  Switch year : Add Dice roll to current user -> Display New Score 
+
+
+use holds score  ->Add Current Score to total score ->score >=100?win : Switch player 
+
+
+
+user resets game  -> Set all scores to 0 ->set 1 as Stating player 
