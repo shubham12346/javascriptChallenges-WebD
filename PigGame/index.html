@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-red-900 ">
-    <div class="flex  justify-center mt-32 relative " >
-            <div class="left activePlayer  bg-green-200 p-20 space-y-28 flex flex-col items-center rounded-lg " >
-                <div class="px-4"> <h1 class="text-3xl mx-3 my-3" >Player 1</h1>
-                <div class="mx-12 my-6 text-3xl" id="player1"> 8 </div>
+    <div class="flex   mt-32 relative bg-green-200 w-fit   mx-[10%] md:mx-[25%] rounded-lg " >
+            <div class="left activePlayer p-20 space-y-28 flex flex-col items-center rounded-lg " >
+                <div class="px-4"> <h1 class="text-3xl " >Player 1</h1>
+                <div class="mx-12 my-6 text-4xl" id="player1"> 0 </div>
                 </div>
             
                 <div class="px-8 py-4 flex flex-col items-center bg-green-600 shadow-2xl rounded-lg"> 
@@ -21,9 +21,9 @@
             </div>
 
 
-            <div class="left activePlayer bg-green-200 p-20 space-y-28 flex flex-col items-center border-l-2 rounded-lg">
-                <div class="px-4"> <h1 class="text-3xl mx-3 my-3">Player 2</h1>
-                <div class="mx-12 my-6 text-3xl" id="player2"> 8p
+            <div class="right activePlayer p-20 space-y-28 flex flex-col items-center border-l-2 rounded-lg">
+                <div class="px-4"> <h1 class="text-3xl ">Player 2</h1>
+                <div class="mx-12 my-6 text-4xl" id="player2"> 0
 
                 </div>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-        <div class="absolute inset-0 left-[47%] top-3 bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[45%]"><button> New game</button></div>
+        <div class="absolute inset-0 left-[47%] top-3 bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[45%]"><button onclick=" start()"> New game</button></div>
 <!-- 
         image diece -->
            <div class="absolute inset-0 left-[47%] md:left-[45%] top-28 bg-white w-fit h-fit px-3 py-2 rounded-md"> <img src="/dice-1.png" class="w-16" alt="" srcset=""  id="diece"></div>
@@ -45,6 +45,9 @@
 
 
         <div class="absolute inset-0 left-[48%] top-[20rem]  bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[47%]"><button id="hold"> Hold</button></div>
+
+        
+        <div class="absolute inset-0 left-[38%] top-[26rem]  bg-white w-fit h-fit px-3 py-2 rounded-md md:left-[35%]     " id="winner"> <p> </p>player 0 won start new game </div>
 
     </div>
 
